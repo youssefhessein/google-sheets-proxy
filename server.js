@@ -11,6 +11,11 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+// إعداد مسار GET لمعالجة الطلبات على المسار الجذر
+app.get('/', (req, res) => {
+    res.send('Proxy Server is running!');
+});
+
 // إعداد مسار البروكسي
 app.post('/proxy', async (req, res) => {
     try {
