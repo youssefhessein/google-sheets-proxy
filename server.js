@@ -21,7 +21,7 @@ app.post('/proxy', async (req, res) => {
     try {
         // إرسال البيانات إلى Google Apps Script
         const response = await axios.post(
-            'https://script.google.com/macros/s/1OpNYppRaFWY3wm2QprMWxzz_cM5AjbuBSnsrMIF-G6fw0NPjYhy32_Z6/exec', // الرابط الصحيح
+            'https://script.google.com/macros/s/AKfycbyyex4mSro1SpgOKSV9_r5tb763qzicIbMzPZMsFZCCyR4e5KrjRNm0gbOWHQgmT4m51Q/exec', // الرابط الصحيح
             req.body,
             { headers: { 'Content-Type': 'application/json' } }
         );
