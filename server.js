@@ -34,6 +34,6 @@ app.post('/proxy', async (req, res) => {
     }
 });
 
-// تشغيل السيرفر على المنفذ 3000
-const PORT = 3000;
+// تشغيل السيرفر على المنفذ الديناميكي أو 3000 إذا لم يتم تحديده
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Proxy server running on http://localhost:${PORT}`));
